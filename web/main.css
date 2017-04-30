@@ -1,0 +1,47 @@
+h1 {
+    color:#444444;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+h2 {
+    color: gray;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-align: center;
+}
+
+p {
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.boxed {
+    width: 320px;
+    padding: 15px;
+    border: 1px solid black;
+    margin: auto;    
+}
+
+.topnav {
+    background-color: #444444;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #f8f8ff;
+    color: #000000;
+}
+
+.topnav a.active {
+    background-color: #CCCC00;
+    color: white;
+}
