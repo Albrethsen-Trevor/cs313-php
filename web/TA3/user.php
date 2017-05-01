@@ -9,7 +9,22 @@ $locations = $_POST["locations"];
 echo "name is {$name}", "email is {$email}", "majors is {$majors}", "comments is ${comments}", "locations is ";
 
 foreach($locations as $index){
-                echo $index;
+				switch ($index) {
+					case 'na': 
+						echo "North America<br>";
+						break;
+					case 'sa':
+						echo "South America<br>";
+						break;
+					case 'eu': 
+						echo "Europe<br>";
+						break;
+					case 'as':
+						echo "Asia<br>";
+						break;
+					
+				}
             }
+
 
 ?>
