@@ -21,6 +21,7 @@
                 <div>
                     <h2>Under Construction...</h2>
                     <p>More coming soon...</p>
+                    <center><img src=https://cdn.dribbble.com/users/175139/screenshots/2331025/comingsoon.gif></center>
                 </div>
             </section>
             
