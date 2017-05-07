@@ -11,7 +11,7 @@
             <nav>  
                 <div class="topnav">
                   <a class="active" href= "/index.php">Home</a>
-                  <a href="/assignments.php">Assignments</a>
+                  <a href="assignments.php">Assignments</a>
                 </div>
             </nav>
         </header>
