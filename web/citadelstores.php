@@ -24,19 +24,5 @@ $dbconn5 = pg_connect("host=ec2-23-23-227-188.compute-1.amazonaws.com options='-
 <body>
     <h1>List of Citadel Stores</h1>
     
-    <?php
-    
-    $statement = $db->prepare("SELECT name, description FROM citadel_stores");
-    statement->execute();
-    
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-    {
-        
-        echo '<p>';
-        echo '<strong>' . $row['name'] . '</strong>' . ': ' . $row['description'];
-        echo '</p>';
-    }
-
-    ?>
 </body>
 </html>
