@@ -40,7 +40,7 @@ $results = $statement->fetchAll(PDO::FETCH_ASSOC);
     
     <?php
         foreach ($results as $row) {
-            echo "<p>" . $row['name'] . ' ' . $row['location'] . ' ' . $row['owner'] ."</p>";
+            echo "<p>" . $row['s.name'] . ' ' . $row['location'] . ' ' . $row['owner'] ."</p>";
             
             $counter++;
     }
