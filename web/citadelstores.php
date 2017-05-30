@@ -18,7 +18,7 @@ try {
 }
 
 $query = 'SELECT name, location, owner FROM store';
-$query = 'SELECT name, location, owner FROM inventory';
+$query = 'SELECT name, shipment FROM inventory';
 
 //$query = "SELECT name, birthday, pictureUrl FROM actor a INNER JOIN movieActor ma ON a.id = ma.actorId INNER JOIN movie m ON m.id = ma.movieId WHERE m.title = :movie_title";
 
