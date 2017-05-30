@@ -17,7 +17,7 @@ try {
     die();
 }
 
-$query = 'SELECT name, location, owner FROM store';
+$query = 'SELECT name, location, owner FROM inventoryStore';
 
 //$query = "SELECT name, birthday, pictureUrl FROM actor a INNER JOIN movieActor ma ON a.id = ma.actorId INNER JOIN movie m ON m.id = ma.movieId WHERE m.title = :movie_title";
 
@@ -39,7 +39,7 @@ $results = $statement->fetchAll(PDO::FETCH_ASSOC);
     
     <?php
         foreach ($results as $row) {
-            echo "<p>" . $row['name'] . ' ' . $row['location'] . ' ' . $row['owner'] ."</p>";
+            echo "<p>" . $row['storeId'] . ' ' . $row['inventoryId'] . ' ' . $row['inventoryType'] ."</p>";
             
             $counter++;
     }
