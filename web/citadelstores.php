@@ -18,7 +18,7 @@ try {
 }
 
 $query = 'SELECT title, location, owner FROM store';
-$query = 'SELECT name, shipment FROM inventory';
+//$query = 'SELECT name, shipment FROM inventory';
 
 
 $statement = $db->prepare($query);
