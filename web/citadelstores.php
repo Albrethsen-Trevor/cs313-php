@@ -20,10 +20,8 @@ try {
 $query = 'SELECT sname, location, owner FROM store';
 $query = 'SELECT name, shipment FROM inventory';
 
-//$query = "SELECT name, birthday, pictureUrl FROM actor a INNER JOIN movieActor ma ON a.id = ma.actorId INNER JOIN movie m ON m.id = ma.movieId WHERE m.title = :movie_title";
 
 $statement = $db->prepare($query);
-//$statement->bindValue(":movie_title", $movie, PDO::PARAM_STR);
 $statement->execute();
 
 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
