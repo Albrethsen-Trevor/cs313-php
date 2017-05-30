@@ -18,7 +18,6 @@ try {
 }
 
 $query = 'SELECT title, location, owner FROM store',
-         'SELECT name, shipment FROM inventory';
 //$query = 'SELECT name, shipment FROM inventory';
 
 
