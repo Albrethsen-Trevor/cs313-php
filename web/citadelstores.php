@@ -17,7 +17,7 @@ try {
     die();
 }
 
-$query = 'SELECT title, location, owner FROM store',
+$query = 'SELECT title, location, owner FROM store';
 //$query = 'SELECT name, shipment FROM inventory';
 
 
