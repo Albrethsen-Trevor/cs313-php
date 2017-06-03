@@ -7,7 +7,7 @@ function get_db() {
         $dbUrl = getenv('DATABASE_URL');
         
         if (!isset($dbUrl) || empty($dbUrl)) {
-            $dbUrl = "postgres://rvhisotzxirgct:1d5f38daad8d3164a83ea5d9f27a0d5efe65eba86056abcf948b360ccf31b4bf@ec2-23-23-227-188.compute-1.amazonaws.com:5432/dcd7qqpqqovmfr"
+            $dbUrl = "postgres://rvhisotzxirgct:1d5f38daad8d3164a83ea5d9f27a0d5efe65eba86056abcf948b360ccf31b4bf@ec2-23-23-227-188.compute-1.amazonaws.com:5432/dcd7qqpqqovmfr";
         }
         
         $dbopts = parse_url($dbUrl);
