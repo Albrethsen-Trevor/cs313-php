@@ -1,21 +1,7 @@
 <?php
 
-$dcd7qqpqqovmfr = htmlspecialchars($_GET['dcd7qqpqqovmfr']);
-
-$user = 'rvhisotzxirgct';
-$pass = '1d5f38daad8d3164a83ea5d9f27a0d5efe65eba86056abcf948b360ccf31b4bf';
-$dbName = 'dcd7qqpqqovmfr';
-$dbHost = 'ec2-23-23-227-188.compute-1.amazonaws.com';
-$dbPort = '5432';
-
-try {
-    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $user, $pass);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-} catch (PDOException $ex) {
-    echo "Error connecting to the db. Details: $ex";
-    die();
-}
+require("dbConnect.php");
+$db = get_db();
 
 $query = 'SELECT title, location, owner FROM store';
 //$query = 'SELECT name, shipment FROM inventory';
@@ -24,9 +10,10 @@ $query = 'SELECT title, location, owner FROM store';
 $statement = $db->prepare($query);
 $statement->execute();
 
+?>
+
 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-?>
 
 <!doctype html>
 <html>
