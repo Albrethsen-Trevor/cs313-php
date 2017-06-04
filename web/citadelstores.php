@@ -3,21 +3,7 @@
 require("dbConnect.php");
 $db = get_db();
 
-$query = 'SELECT title, location, owner FROM store';
-//$query = 'SELECT name, shipment FROM inventory';
-
-
-$query = 'SELECT title, location, owner FROM store';
-//$query = 'SELECT name, shipment FROM inventory';
-
-
-$statement = $db->prepare($query);
-$statement->execute();
-
-$results = $statement->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
-
 
 <!doctype html>
 <html>
@@ -25,25 +11,44 @@ $results = $statement->fetchAll(PDO::FETCH_ASSOC);
     <title>Stores Across the Universe</title>
 </head>
 <body>
-    <h1>List of Stores</h1>
+<h1>List of Stores</h1>
+
+<?php
     
-    <?php
-        foreach ($results as $row) {
-            echo "<p>" . $row['title'] . ' ' . $row['location'] . ' ' . $row['owner'] ."</p>";
-            
-            $counter++;
+try
+{
+    $statement = db->prepare('SELECT id, title, location, owner FROM store');
+    $statement->execute();
+    
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+    {
+        echo '<p>';
+        echo '<strong>' . $row['title'] . ' ---- ' . $row['location'] . ' ---- ' . '</strong>' . ' ---- ' . $row['owner'];
+        echo '<br />';
+        echo 'Inventory:';
+        
+        $stmtInventories = $db->prepare('SELECT name FROM inventory i'
+            . ' INNER JOIN storeInventory si ON si.invenotryId = i.id'
+            . ' WHERE si.storeId = :storeId');
+        
+        stmtInventories->bindValue(':storeId', row['id']);
+        stmtInventories->execute();
+        
+        while ($inventoryRow = $stmtInventories->fetch(PDO::FETCH_ASSOC))
+        {
+            echo $inventoryRow['name'] . ' ';
+        }
+        
+        echo '</p>';
     }
-    ?>
-    
-    <h1>List of Items</h1>
-    
-    <?php
-        foreach ($results as $row) {
-            echo "<p>" . $row['name'] . ' ' . $row['shipment'] ."</p>";
-            
-            $counter++;
-    }
-    ?>
+} 
+catch (PDOException $ex)
+{
+    echo "Error with DB. Details: $ex";
+    die();
+}
+
+?>
     
 </body>
 </html>
