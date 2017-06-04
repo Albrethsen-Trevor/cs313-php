@@ -9,6 +9,7 @@ $db = get_db();
 <html>
 <head>
     <title>Rating Entry</title>
+    <link rel="stylesheet" href="/main.css">
 </head>
     
 <body>

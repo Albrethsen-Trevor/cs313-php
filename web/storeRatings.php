@@ -9,7 +9,8 @@ $db = get_db();
 <html>
 
 <head>
-    <title>Mass Effect Stores and User Ratings</title>   
+    <title>Mass Effect Stores and User Ratings</title>
+    <link rel="stylesheet" href="/main.css">
 </head>
 
 <body>
@@ -35,7 +36,7 @@ $db = get_db();
             
             stmtRatings = $db->prepare('SELECT review FROM rating r'
                     . ' INNER JOIN store_rating sr ON sr.ratingId = r.id'
-                    . ' WHERE sr.storeId = storeId');
+                    . ' WHERE sr.storeId = :storeId');
             
             $stmtRatings->bindValue(':storeId', $row['id']);
             $stmtRatings->execute();

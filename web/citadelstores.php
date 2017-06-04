@@ -17,6 +17,7 @@ $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 <html>
 <head>
     <title>Mass Effect Stores and User Ratings</title>
+    <link rel="stylesheet" href="/main.css">
 </head>
 <body>
     <h1>List of Stores and User Ratings</h1>
