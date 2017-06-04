@@ -42,7 +42,7 @@ $results = $statement->fetchAll(PDO::FETCH_ASSOC);
             echo '<br />';
             echo 'Ratings: ';
             echo '<p>';
-            echo 'User Review: ' . $row['review'] . ' ';
+            echo '<strong>User Review:</strong> ' . $row['review'] . ' ';
     }
     ?>
     
