@@ -35,15 +35,5 @@ $results = $statement->fetchAll(PDO::FETCH_ASSOC);
     }
     ?>
     
-    <h1>List of Items</h1>
-    
-    <?php
-        foreach ($results as $row) {
-            echo "<p>" . $row['name'] . ' ' . $row['shipment'] ."</p>";
-            
-            $counter++;
-    }
-    ?>
-    
 </body>
 </html>
