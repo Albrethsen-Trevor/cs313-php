@@ -20,6 +20,17 @@ $results = $statement->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="/main.css">
 </head>
 <body>
+    
+<header>
+    <h1>CS 313: Web Engineering II</h1>
+    <nav>  
+        <div class="topnav">
+          <a class="active" href= "/index.php">Home</a>
+          <a href="assignments.php">Assignments</a>
+        </div>
+    </nav>
+</header>
+    
     <h1>List of Stores and User Ratings</h1>
     
     <?php

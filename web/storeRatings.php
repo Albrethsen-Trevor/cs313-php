@@ -15,6 +15,16 @@ $db = get_db();
 
 <body>
 
+<header>
+    <h1>CS 313: Web Engineering II</h1>
+    <nav>  
+        <div class="topnav">
+          <a class="active" href= "/index.php">Home</a>
+          <a href="assignments.php">Assignments</a>
+        </div>
+    </nav>
+</header>
+
 <div>
     
     <h1>Mass Effect Stores and User Ratings</h1>
