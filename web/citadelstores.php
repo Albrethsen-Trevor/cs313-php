@@ -4,6 +4,7 @@ require("dbConnect.php");
 $db = get_db();
 
 $query = 'SELECT title, location, owner FROM store';
+$query = 'SELECT review FROM rating';
 
 $statement = $db->prepare($query);
 $statement->execute();
@@ -40,6 +41,8 @@ $results = $statement->fetchAll(PDO::FETCH_ASSOC);
             echo $row['owner'] . '</strong>';
             echo '<br />';
             echo 'Ratings: ';
+            echo '<p>';
+            echo 'User Review: ' . $row['review'] . ' ';
     }
     ?>
     
