@@ -29,9 +29,11 @@ $results = $statement->fetchAll(PDO::FETCH_ASSOC);
     
     <?php
         foreach ($results as $row) {
-            echo "<p>" . $row['title'] . ' ' . $row['location'] . ' ' . $row['owner'] ."</p>";
-            
-            $counter++;
+            echo '<p>';
+            echo '<strong>' . $row['title'] . ' ' . $row['location'] . ' ';
+            echo $row['owner'] . '</strong>';
+            echo '<br />';
+            echo 'Ratings: ';
     }
     ?>
     
