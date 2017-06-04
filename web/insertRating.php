@@ -40,6 +40,7 @@ catch (Exception $ex)
 }
 
 header("Location: storeRatings.php");
+
 die();
 
 ?>
