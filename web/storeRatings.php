@@ -35,7 +35,7 @@ $db = get_db();
             
             stmtRatings = $db->prepare('SELECT review FROM rating r'
                     . ' INNER JOIN store_rating sr ON sr.ratingId = r.id'
-                    . ' WHERE sr.storeId = :storeId');
+                    . ' WHERE sr.storeId = storeId');
             
             $stmtRatings->bindValue(':storeId', $row['id']);
             $stmtRatings->execute();
