@@ -40,7 +40,7 @@ $results = $statement->fetchAll(PDO::FETCH_ASSOC);
             echo '<strong>' . $row['title'] . ' ' . $row['location'] . ' ';
             echo $row['owner'] . '</strong>';
             echo '<br />';
-            echo 'Ratings: ';
+            echo '<h2>Ratings:</h2> ';
             echo '<p>';
             echo '<strong>User Review:</strong> ' . $row['review'] . ' ';
     }
