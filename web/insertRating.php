@@ -39,7 +39,7 @@ catch (Exception $ex)
 	die();
 }
 
-header("Location: storeRatings.php");
+header("Location: citaldelstores.php");
 
 die();
 
