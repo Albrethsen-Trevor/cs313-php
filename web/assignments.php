@@ -20,7 +20,7 @@
             <section>
                 <div>
                     <h2>Under Construction...</h2>
-                    <a href="prove3/browse.php">Prove 3: PHP Shopping Cart</a>
+                    <a href="prove3/browse.php">Prove 3: PHP Shopping Cart</a><br>
                     <a href="citadelstores.php">Stores and User Reviews</a>
                     <p>More coming soon...</p>
                     <center><img src=https://cdn.dribbble.com/users/175139/screenshots/2331025/comingsoon.gif></center>
